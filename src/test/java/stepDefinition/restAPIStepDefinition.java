@@ -71,19 +71,19 @@ public class restAPIStepDefinition {
     @When("User send the resources as {string} with {string} call")
     public void user_send_the_resources_as(String resources, String call) {
         if(call.equalsIgnoreCase("get")){
-            response=requestSpecification.log().all().when().get(resources);
+            response=requestSpecification.when().get(resources);
         }
         else if(call.equalsIgnoreCase("post")){
-            response=requestSpecification.log().all().when().post(resources);
+            response=requestSpecification.when().post(resources);
         }
         else if(call.equalsIgnoreCase("put")){
-            response=requestSpecification.log().all().when().put(resources);
+            response=requestSpecification.when().put(resources);
         }
         else if(call.equalsIgnoreCase("patch")){
-            response=requestSpecification.log().all().when().patch(resources);
+            response=requestSpecification.when().patch(resources);
         }
         else if(call.equalsIgnoreCase("delete")){
-            response=requestSpecification.log().all().when().delete(resources);
+            response=requestSpecification.when().delete(resources);
         }
 
     }
