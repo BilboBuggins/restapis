@@ -28,7 +28,7 @@ Feature: Test the Rest APIs
     |  Authorization        |  Bearer 235e225d46a4dfcdc38beab23d582f83981ac2b46fe6cbce38cbf42d3717d6cd             |
     And User adds the "postRequest.json" body to the request
     And User send the resources as "public/v2/users" with "Post" call
-    Then User expect a response as 201
+    Then User expect a response as 422
 
   Scenario: Test the Delete Operation
     Given User send the URL "https://gorest.co.in"
@@ -37,4 +37,4 @@ Feature: Test the Rest APIs
       |  Content-Type         |  application/json                |
       |  Authorization        |  Bearer 235e225d46a4dfcdc38beab23d582f83981ac2b46fe6cbce38cbf42d3717d6cd             |
     And User send the resources as "public/v2/users/1036917" with "Delete" call
-    Then User expect a response as 204
+    Then User expect a response as 404

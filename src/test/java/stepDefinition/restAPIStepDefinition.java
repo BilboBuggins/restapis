@@ -26,12 +26,13 @@ public class restAPIStepDefinition {
      */
     @Given("User send the URL {string}")
     public void user_send_the_url(String string) {
+
         requestSpecification=given().log().all().baseUri(string);
     }
 
     /**
      * This method take data in a data table format with key value pair and then converts the data table into
-     * a List of Sting map. It later iterates using a for loop and adds the data as headers to the existing
+     * a List of String map. It later iterates using a for loop and adds the data as headers to the existing
      * Request specification.
      * @param dataTable
      */
